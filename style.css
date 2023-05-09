@@ -1,0 +1,21 @@
+.grid {
+  margin-top: 200px;
+  margin-left: 200px;
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid div {
+  height: 20px;
+  width: 20px;
+}
+.alien {
+  background-color: purple;
+  size: 20px;
+  border-radius: 50%;
+}
+.shooter {
+  background-color: green;
+}
