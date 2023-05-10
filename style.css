@@ -19,3 +19,13 @@
 .shooter {
   background-color: green;
 }
+.result {
+  font-size: 40px;
+}
+
+.bullet {
+  background-color: aqua;
+}
+.boom {
+  background-color: red;
+}
