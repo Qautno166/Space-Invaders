@@ -62,11 +62,16 @@ function shooting(e) {
         square[bulletStart].classList.remove("alien");
         square[bulletStart].classList.add("boom");
         setTimeout(() => square[bulletStart].classList.remove("boom"), 30);
+
         alienInvaders.splice(alienIndex, 1);
       }
+      alienRemoval.push(alienIndex);
+      // alienIndex.push(alienRemoval);
+      console.log(alienIndex);
+      console.log(alienRemoval);
+      console.log(alienInvaders);
       // const alienRemove = alienInvaders.indexOf(bulletStart);
       // alienRemoval.push(alienRemove);
-      // console.log(alienRemoval);
     }
   }
 
@@ -125,7 +130,21 @@ function moveAlien() {
     clearInterval(bulletID);
     result.innerHTML = "GAME OVER";
   }
+  for (let i = 0; i < alienInvaders.length; i++) {
+    if (alienInvaders[i] > square.length) {
+      console.log("game over");
+      clearInterval(time);
+
+      result.innerHTML = "GAME OVER";
+    }
+  }
+
+  if (alienInvaders.length === 0) {
+    console.log("winn");
+    result.innerHTML = "You WIN";
+  }
+
   draw();
 }
 
-const time = setInterval(moveAlien, 500);
+const time = setInterval(moveAlien, 250);
